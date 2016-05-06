@@ -1,0 +1,14 @@
+{
+    "name": "katsuo-ryuu/kryuu-template-builder",
+    "description": "A template constructor that can be used for creating module templates",
+    "license": "Ryuu Technology Free License",
+    "keywords": [
+        "zf2",
+        "Console"
+    ],
+    "homepage": "https://github.com/KatsuoRyuu/KryuuTemplateBuilder",
+    "require": {
+        "php": "^5.5 || ^7.0",
+        "zendframework/zendframework": "^2.5"
+    }
+}

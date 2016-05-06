@@ -1,0 +1,29 @@
+{%START_PHP%}
+{%LICENSE%}
+
+{%NAMESPACE_CODE%}
+
+return [
+    'resource_providers' => [
+        'BjyAuthorize\Provider\Resource\Config' => [
+            //'KryuuCarousel' => []
+        ]
+    ],
+    'rule_providers' => [
+        'BjyAuthorize\Provider\Rule\Config' => [
+            'allow' => [
+                //[['guest','user']'KryuuCarousel',['view']]
+                //[['moderator']'KryuuCarousel',['add','edit']]
+                //[[]'Account\Controller\AccountController',[]]
+            ]
+        ]
+    ],
+    'guards' => [
+        'BjyAuthorize\Guard\Controller' => [
+            //['controller' => 'KryuuAccount\status', 'roles' => ['guest','user']]
+        ],
+        'BjyAuthorize\Guard\Route' => [
+            //['route' => 'KryuuTranslationService', 'roles' => ['guest']]
+        ]
+    ]
+];

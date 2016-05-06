@@ -1,0 +1,20 @@
+{%START_PHP%}
+{%LICENSE%}
+
+{%NAMESPACE_CODE%}
+
+return [
+    'router' => [
+        'routes' => [
+            __NAMESPACE__ => [
+                'options' => [
+                    'route'    => 'command',
+                    'defaults' => [
+                        'controller' => __NAMESPACE__ . '\Controller\Console',
+                        'action'     => 'all'
+                    ],
+                ],
+            ],
+        ],
+    ],
+];

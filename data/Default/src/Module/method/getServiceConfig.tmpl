@@ -1,0 +1,16 @@
+    /**
+     * @return Array
+     */
+    public function getServiceConfig()
+    {
+        return array(
+            'factories' => array(
+                'AdministrationMenu' => function ($sm){
+                    $sharedEventManager = $sm->get('SharedEventManager');
+                    $administrationEventService = new MenuEvent();
+                    $administrationEventService->setSharedManager($sharedEventManager);
+                    return $administrationEventService;
+                }
+            )
+        );
+    }

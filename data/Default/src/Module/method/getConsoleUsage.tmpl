@@ -1,0 +1,15 @@
+    /**
+     * @param Console $console
+     * @return Array
+     */
+    public function getConsoleUsage(Console $console)
+    {
+       return array(
+           __NAMESPACE__ . ' [command] ([module_name])' => 'Testing the system, by using phpunit to run test on all the modules',
+
+           // Describe expected parameters
+           array( 'all',    'This will find all the modules and test available for testing'),
+           array( 'select', 'Gets a selector for selecting modules for testing'),
+           array( 'module', 'Test a single module by entering the name after the command (module_name)'),
+       );
+    }
