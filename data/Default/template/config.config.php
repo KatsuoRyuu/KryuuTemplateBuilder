@@ -41,158 +41,166 @@ return [
     new File(
         'module.config.php',
         '{%NAMESPACE%}/config/',
-        __TMPL_DIR__ . '/config/module.config.tmpl'
+        __TMPL_DIR__ . '/config/module.config.tmpl',
+        new Question(
+            'Add BjyAuthorize', 
+            'boolean', 
+            true, 
+            [
+                new Variable(
+                    '{%CONFIG_INCLUDE%}', 
+                    '    \'bjyauthorize\'      => include(__DIR__ . \'bjyauthorize.config.php\'),',
+                    null,
+                    null,
+                    PHP_EOL
+                ),
+                new File(
+                    'bjyauthorize.config.php',
+                    '{%NAMESPACE%}/config/',
+                    __TMPL_DIR__ . '/config/bjyauthorize.config.tmpl'
+                )
+
+            ]
+        ),
+        new Question(
+            'Add Router', 
+            'boolean', 
+            true, 
+            [
+                new Variable(
+                    '{%CONFIG_INCLUDE%}', 
+                    '    \'router\'            => include(__DIR__ . \'router.config.php\'),',
+                    null,
+                    null,
+                    PHP_EOL
+                ),
+                new File(
+                    'router.config.php',
+                    '{%NAMESPACE%}/config/',
+                    __TMPL_DIR__ . '/config/router.config.tmpl'
+                )
+
+            ]
+        ),
+        new Question(
+            'Add Navigation', 
+            'boolean', 
+            true, 
+            [
+                new Variable(
+                    '{%CONFIG_INCLUDE%}', 
+                    '    \'navigation\'        => include(__DIR__ . \'navigation.config.php\'),',
+                    null,
+                    null,
+                    PHP_EOL
+                ),
+                new File(
+                    'navigation.config.php',
+                    '{%NAMESPACE%}/config/',
+                    __TMPL_DIR__ . '/config/navigation.config.tmpl'
+                )
+
+            ]
+        ),
+        new Question(
+            'Add Service Manager', 
+            'boolean', 
+            true, 
+            [
+                new Variable(
+                    '{%CONFIG_INCLUDE%}', 
+                    '    \'service_manager\'   => include(__DIR__ . \'servicemanager.config.php\'),',
+                    null,
+                    null,
+                    PHP_EOL
+                ),
+                new File(
+                    'servicemanager.config.php',
+                    '{%NAMESPACE%}/config/',
+                    __TMPL_DIR__ . '/config/servicemanager.config.tmpl'
+                )
+
+            ]
+        ),
+        new Question(
+            'Add Controller', 
+            'boolean', 
+            true, 
+            [
+                new Variable(
+                    '{%CONFIG_INCLUDE%}', 
+                    '    \'controller\'        => include(__DIR__ . \'controller.config.php\'),',
+                    null,
+                    null,
+                    PHP_EOL
+                ),
+                new File(
+                    'controller.config.php',
+                    '{%NAMESPACE%}/config/',
+                    __TMPL_DIR__ . '/config/controller.config.tmpl'
+                )
+
+            ]
+        ),
+        new Question(
+            'Add Console', 
+            'boolean', 
+            true, 
+            [
+                new Variable(
+                    '{%CONFIG_INCLUDE%}', 
+                    '    \'console\'           => include(__DIR__ . \'console.config.php\'),',
+                    null,
+                    null,
+                    PHP_EOL
+                ),
+                new File(
+                    'console.config.php',
+                    '{%NAMESPACE%}/config/',
+                    __TMPL_DIR__ . '/config/console.config.tmpl'
+                )
+
+            ]
+        ),
+        new Question(
+            'Add View Manager', 
+            'boolean', 
+            true, 
+            [
+                new Variable(
+                    '{%CONFIG_INCLUDE%}', 
+                    '    \'view_manager\'      => include(__DIR__ . \'viewmanager.config.php\'),',
+                    null,
+                    null,
+                    PHP_EOL
+                ),
+                new File(
+                    'viewmanager.config.php',
+                    '{%NAMESPACE%}/config/',
+                    __TMPL_DIR__ . '/config/viewmanager.config.tmpl'
+                )
+
+            ]
+        ),
+        new Question(
+            'Add View Helper', 
+            'boolean', 
+            true, 
+            [
+                new Variable(
+                    '{%CONFIG_INCLUDE%}', 
+                    '    \'view_helper\'       => include(__DIR__ . \'viewhelper.config.php\'),',
+                    null,
+                    null,
+                    PHP_EOL
+                ),
+                new File(
+                    'viewhelper.config.php',
+                    '{%NAMESPACE%}/config/',
+                    __TMPL_DIR__ . '/config/viewhelper.config.tmpl'
+                )
+
+            ]
+        )
     ),
-    new Question(
-        'Add BjyAuthorize', 
-        'boolean', 
-        true, 
-        [
-            new Variable(
-                '{%CONFIG_INCLUDE%}', 
-                '    \'bjyauthorize\' => include(\'bjyauthorize.config.php\')', 
-                null, 
-                null
-            ),
-            new File(
-                'bjyauthorize.config.php',
-                '{%NAMESPACE%}/config/',
-                __TMPL_DIR__ . '/config/bjyauthorize.config.tmpl'
-            )
-            
-        ]
-    ),
-    new Question(
-        'Add Router', 
-        'boolean', 
-        true, 
-        [
-            new Variable(
-                '{%CONFIG_INCLUDE%}', 
-                '    \'router\' => include(\'router.config.php\')', 
-                null, 
-                null
-            ),
-            new File(
-                'router.config.php',
-                '{%NAMESPACE%}/config/',
-                __TMPL_DIR__ . '/config/router.config.tmpl'
-            )
-            
-        ]
-    ),
-    new Question(
-        'Add Navigation', 
-        'boolean', 
-        true, 
-        [
-            new Variable(
-                '{%CONFIG_INCLUDE%}', 
-                '    \'navigation\' => include(\'navigation.config.php\')', 
-                null, 
-                null
-            ),
-            new File(
-                'navigation.config.php',
-                '{%NAMESPACE%}/config/',
-                __TMPL_DIR__ . '/config/navigation.config.tmpl'
-            )
-            
-        ]
-    ),
-    new Question(
-        'Add Service Manager', 
-        'boolean', 
-        true, 
-        [
-            new Variable(
-                '{%CONFIG_INCLUDE%}', 
-                '    \'service_manager\' => include(\'servicemanager.config.php\')', 
-                null, 
-                null
-            ),
-            new File(
-                'servicemanager.config.php',
-                '{%NAMESPACE%}/config/',
-                __TMPL_DIR__ . '/config/servicemanager.config.tmpl'
-            )
-            
-        ]
-    ),
-    new Question(
-        'Add Controller', 
-        'boolean', 
-        true, 
-        [
-            new Variable(
-                '{%CONFIG_INCLUDE%}', 
-                '    \'controller\' => include(\'controller.config.php\')', 
-                null, 
-                null
-            ),
-            new File(
-                'controller.config.php',
-                '{%NAMESPACE%}/config/',
-                __TMPL_DIR__ . '/config/controller.config.tmpl'
-            )
-            
-        ]
-    ),
-    new Question(
-        'Add Console', 
-        'boolean', 
-        true, 
-        [
-            new Variable(
-                '{%CONFIG_INCLUDE%}', 
-                '    \'console\' => include(\'console.config.php\')', 
-                null, 
-                null
-            ),
-            new File(
-                'console.config.php',
-                '{%NAMESPACE%}/config/',
-                __TMPL_DIR__ . '/config/console.config.tmpl'
-            )
-            
-        ]
-    ),
-    new Question(
-        'Add View Manager', 
-        'boolean', 
-        true, 
-        [
-            new Variable(
-                '{%CONFIG_INCLUDE%}', 
-                '    \'view_manager\' => include(\'viewmanager.config.php\')', 
-                null, 
-                null
-            ),
-            new File(
-                'viewmanager.config.php',
-                '{%NAMESPACE%}/config/',
-                __TMPL_DIR__ . '/config/viewmanager.config.tmpl'
-            )
-            
-        ]
-    ),
-    new Question(
-        'Add View Helper', 
-        'boolean', 
-        true, 
-        [
-            new Variable(
-                '{%CONFIG_INCLUDE%}', 
-                '    \'view_helper\' => include(\'viewhelper.config.php\')', 
-                null, 
-                null
-            ),
-            new File(
-                'viewhelper.config.php',
-                '{%NAMESPACE%}/config/',
-                __TMPL_DIR__ . '/config/viewhelper.config.tmpl'
-            )
-            
-        ]
-    )
 ];

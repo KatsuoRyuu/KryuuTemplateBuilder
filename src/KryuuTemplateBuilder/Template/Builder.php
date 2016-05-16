@@ -139,6 +139,7 @@ class Builder
     private function readFile(FileInterface $file)
     {
         $this->buildStack[] = $this->current;
+        $parent = $this->current;
         $this->current = new File();
         $this->build->addFile($this->current);
         $this->current->setName($this->replacements(
@@ -152,8 +153,6 @@ class Builder
                 $file->getPath()
         ));
         $this->current->setContent($file->getContent());
-        end($this->buildStack);
-        $parent = prev($this->buildStack);
         if ($parent instanceof File) {
             foreach ($parent->getVariables() as $variable) {
                 $this->reader($variable);

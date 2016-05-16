@@ -50,7 +50,7 @@ return [
         'Author name',
         'varchar',
         [
-            new Variable('{%AUTHOR_NAME%}', 'MyName'),
+            new Variable('{%AUTHOR_NAME%}', 'Anders Blenstrup-Pedersen'),
         ],
         []
     ),
@@ -58,7 +58,7 @@ return [
         'Author alias',
         'varchar',
         [
-            new Variable('{%AUTHOR_ALIAS%}', 'MyAlias'),
+            new Variable('{%AUTHOR_ALIAS%}', 'KatsuoRyuu'),
         ],
         []
     ),
@@ -66,7 +66,7 @@ return [
         'Website',
         'varchar',
         [
-            new Variable('{%WEBSITE%}', 'http://github.com/{%MyName%}'),
+            new Variable('{%WEBSITE%}', 'http://github.com/{%AUTHOR_ALIAS%}'),
         ],
         []
     ),
@@ -74,7 +74,7 @@ return [
         'Email',
         'varchar',
         [
-            new Variable('{%EMAIL%}', '{%AUTHOR_ALIAS%}@somedomain.invalid'),
+            new Variable('{%EMAIL%}', 'abp@ryuu.technology'),
         ],
         []
     ),

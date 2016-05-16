@@ -67,9 +67,9 @@ return [
             ),
             new File(
                 '{%SERVICE_NAME%}Factory.php',
-                '{%NAMESPACE%}/src/{%NAMESPACE%}/service/',
+                '{%NAMESPACE%}/src/{%NAMESPACE%}/Factory/Service/',
                 __TMPL_DIR__ . '/src/Service/Service.tmpl',
-                new Variable('{%NAMESPACE_CODE%}', 'namespace {%NAMESPACE%}\Service;'),
+                new Variable('{%NAMESPACE_CODE%}', 'namespace {%NAMESPACE%}\Factory\Service;'),
                 new Variable('{%SERVICE_NAME%}', '{%SERVICE_NAME%}Factory'),
                 new Variable('{%SERVICELOCATOR_INTERFACE%}', 'ServiceLocatorInterface'),
                 new Variable('{%FUNCTIONS%}', file_get_contents(__TMPL_DIR__ . '/src/ServiceFactory/method/createService.tmpl'), null, null, PHP_EOL),

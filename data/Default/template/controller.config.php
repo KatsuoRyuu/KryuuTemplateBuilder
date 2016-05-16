@@ -62,9 +62,9 @@ return [
             ),
             new File(
                 '{%CONTROLLER_NAME%}Factory.php',                    
-                '{%NAMESPACE%}/src/{%NAMESPACE%}/Controller/',
+                '{%NAMESPACE%}/src/{%NAMESPACE%}/Factory/Controller/',
                 __TMPL_DIR__ . '/src/DefaultControllerFactory/DefaultController.tmpl',
-                new Variable('{%NAMESPACE_CODE%}', 'namespace {%NAMESPACE%}\Controller;'),
+                new Variable('{%NAMESPACE_CODE%}', 'namespace {%NAMESPACE%}\Factory\Controller;'),
                 new Variable('{%CONTROLLER_FACTORY_NAME%}', '{%CONTROLLER_NAME%}Factory'),
                 new Variable('{%USE%}', 'use Zend\ServiceManager\FactoryInterface;'),
                 new Variable('{%USE%}', 'use Zend\ServiceManager\ServiceLocatorInterface;'),
