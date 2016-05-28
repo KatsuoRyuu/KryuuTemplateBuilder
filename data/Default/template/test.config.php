@@ -72,7 +72,7 @@ return [
                 __TMPL_DIR__ . '/tests/ModuleDeps.tmpl'
             ),
             new File(
-                'phpunit.php',
+                'phpunit.xml',
                 '{%NAMESPACE%}/tests/',
                 __TMPL_DIR__ . '/tests/phpunit.xml'
             ),

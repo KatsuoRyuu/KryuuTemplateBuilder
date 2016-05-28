@@ -82,7 +82,7 @@ class Bootstrap
                     __DIR__ . '/config/module/{,*.}{global,local}.php',
                 ),
             ),
-            'modules' => include(__DIR__ . 'ModuleDeps.php'),
+            'modules' => include(__DIR__ . '/ModuleDeps.php'),
         );
         
         $serviceManager = new ServiceManager(new ServiceManagerConfig());
