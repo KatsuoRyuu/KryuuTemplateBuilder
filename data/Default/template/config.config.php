@@ -49,7 +49,7 @@ return [
             [
                 new Variable(
                     '{%CONFIG_INCLUDE%}', 
-                    '    \'bjyauthorize\'      => include(__DIR__ . \'bjyauthorize.config.php\'),',
+                    '    \'bjyauthorize\'      => include(__DIR__ . \'/bjyauthorize.config.php\'),',
                     null,
                     null,
                     PHP_EOL
@@ -69,7 +69,7 @@ return [
             [
                 new Variable(
                     '{%CONFIG_INCLUDE%}', 
-                    '    \'router\'            => include(__DIR__ . \'router.config.php\'),',
+                    '    \'router\'            => include(__DIR__ . \'/router.config.php\'),',
                     null,
                     null,
                     PHP_EOL
@@ -89,7 +89,7 @@ return [
             [
                 new Variable(
                     '{%CONFIG_INCLUDE%}', 
-                    '    \'navigation\'        => include(__DIR__ . \'navigation.config.php\'),',
+                    '    \'navigation\'        => include(__DIR__ . \'/navigation.config.php\'),',
                     null,
                     null,
                     PHP_EOL
@@ -109,7 +109,7 @@ return [
             [
                 new Variable(
                     '{%CONFIG_INCLUDE%}', 
-                    '    \'service_manager\'   => include(__DIR__ . \'servicemanager.config.php\'),',
+                    '    \'service_manager\'   => include(__DIR__ . \'/servicemanager.config.php\'),',
                     null,
                     null,
                     PHP_EOL
@@ -129,7 +129,7 @@ return [
             [
                 new Variable(
                     '{%CONFIG_INCLUDE%}', 
-                    '    \'controller\'        => include(__DIR__ . \'controller.config.php\'),',
+                    '    \'controllers\'        => include(__DIR__ . \'/controller.config.php\'),',
                     null,
                     null,
                     PHP_EOL
@@ -149,7 +149,7 @@ return [
             [
                 new Variable(
                     '{%CONFIG_INCLUDE%}', 
-                    '    \'console\'           => include(__DIR__ . \'console.config.php\'),',
+                    '    \'console\'           => include(__DIR__ . \'/console.config.php\'),',
                     null,
                     null,
                     PHP_EOL
@@ -169,7 +169,7 @@ return [
             [
                 new Variable(
                     '{%CONFIG_INCLUDE%}', 
-                    '    \'view_manager\'      => include(__DIR__ . \'viewmanager.config.php\'),',
+                    '    \'view_manager\'      => include(__DIR__ . \'/viewmanager.config.php\'),',
                     null,
                     null,
                     PHP_EOL
@@ -189,7 +189,7 @@ return [
             [
                 new Variable(
                     '{%CONFIG_INCLUDE%}', 
-                    '    \'view_helper\'       => include(__DIR__ . \'viewhelper.config.php\'),',
+                    '    \'view_helpers\'       => include(__DIR__ . \'/viewhelper.config.php\'),',
                     null,
                     null,
                     PHP_EOL

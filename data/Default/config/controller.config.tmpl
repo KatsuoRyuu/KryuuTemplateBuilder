@@ -6,6 +6,6 @@
 return [
     'invokables' => [],
     'factories' => [
-        'KryuuModuleCreator\Controller\Console'       => 'KryuuModuleCreator\Controller\Factory\ConsoleControllerFactory',
+        __NAMESPACE__ . '\Controller\Index'       => __NAMESPACE__ . '\Factory\Controller\IndexControllerFactory',
     ],
 ];

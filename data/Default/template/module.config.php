@@ -60,7 +60,7 @@ return [
                 'Module.php',                    
                 '{%NAMESPACE%}/{%MODULE_FILE_PATH%}/',
                 __TMPL_DIR__ . '/src/Module/Module.tmpl',
-                new Variable('{%NAMESPACE_CODE%}', 'namespace {%NAMESPACE%}\Controller;'),
+                new Variable('{%NAMESPACE_CODE%}', 'namespace {%NAMESPACE%};'),
                 new Question(
                     'Need onBootstrap?', 
                     'boolean', 
